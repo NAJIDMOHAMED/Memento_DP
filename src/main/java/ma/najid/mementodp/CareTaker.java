@@ -1,21 +1,20 @@
 package ma.najid.mementodp;
 
-public class Originater {
-    private String article;
-    public void set(String newAricle){
-        System.out.println("From The Originator :Current Version of Article \n"+newAricle+"\n");
-        article = newAricle;
-    }
-    public Memento storeInMemento(){
-        System.out.println("From The Originator :Saving to Memento  \n]");
-        return  new Memento(article);
+import java.util.ArrayList;
+
+public class CareTaker {
+
+    private ArrayList<Memento>savedArticle=new ArrayList<>();
+    public void addMemento(Memento memento){
+        savedArticle.add(memento);
     }
 
-    public String restoreFromMemento(Memento memento){
-             article=memento.getSavedArticle();
-        System.out.println("From The Originator :Previous Article Saved in Memento\n"+article+"\n");
-             return  article;
+    public Memento getMemento(int index){
+        return savedArticle.get(index);
     }
 
 
+    public int size() {
+        return savedArticle.size();
+    }
 }
