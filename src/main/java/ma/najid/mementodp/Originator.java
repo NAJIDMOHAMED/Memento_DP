@@ -1,6 +1,6 @@
 package ma.najid.mementodp;
 
-public class Originater {
+public class Originator {
     private String article;
     public void set(String newAricle){
         System.out.println("From The Originator :Current Version of Article \n"+newAricle+"\n");
@@ -16,6 +16,7 @@ public class Originater {
         System.out.println("From The Originator :Previous Article Saved in Memento\n"+article+"\n");
              return  article;
     }
+
 
 
 }
